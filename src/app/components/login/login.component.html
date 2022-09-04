@@ -1,0 +1,41 @@
+<div class="container m-2 m-auto">
+    <h4 class="text-center">LOGIN</h4>
+    <form #loginForm="ngForm" (ngSubmit)="submitLogin()">
+      <div class="form-group">
+        <label for="email">Email: </label>
+        <input
+          type="text"
+          class="form-control"
+          id="email"
+          name="email"
+          [(ngModel)]="user.email"
+          #email="ngModel"
+          required
+        />
+        </div>
+        <div class="form-group">
+            <label for="password">Password: </label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              name="password"
+              [(ngModel)]="user.password"
+              #password="ngModel"
+              required
+            />
+        </div>
+        <button
+        type="submit"
+        class="btn btn-success mt-3 w-100"
+        [disabled]="loginForm.invalid"
+      >
+        Login
+      </button>
+      <button class="btn btn-primary mt-3 w-100" (click)="submitLoginWithGoogle()">Login with Google</button>
+      <p>
+        <a routerLink="/register">New user? register here</a>
+      </p>
+    </form>
+  </div>
+  

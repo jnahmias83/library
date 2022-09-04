@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { AuthService } from 'src/app/services/auth.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'library';
+
+  constructor(private as : AuthService) { }
+
+  logout() {
+    this.as.logout();
+  }
 }

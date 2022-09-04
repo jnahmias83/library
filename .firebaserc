@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "library-jonathan": {
+      "hosting": {
+        "library": [
+          "library-jonathan"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "library-jonathan"
+  }
+}
